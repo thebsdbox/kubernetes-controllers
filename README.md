@@ -2,7 +2,7 @@
 
 A bunch of controllers for Kubernetes
 
-## KatNav
+## KatNav
 
 A Kubernetes Controller that uses the Google Maps API to create Kubernets objects that provide directions from `source` to `destination`.
 
