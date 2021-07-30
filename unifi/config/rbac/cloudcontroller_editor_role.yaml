@@ -1,0 +1,24 @@
+# permissions for end users to edit cloudcontrollers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cloudcontroller-editor-role
+rules:
+- apiGroups:
+  - unifi.thebsdbox.co.uk
+  resources:
+  - cloudcontrollers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - unifi.thebsdbox.co.uk
+  resources:
+  - cloudcontrollers/status
+  verbs:
+  - get

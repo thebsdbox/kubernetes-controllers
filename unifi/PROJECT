@@ -1,0 +1,25 @@
+domain: thebsdbox.co.uk
+layout:
+- go.kubebuilder.io/v3
+projectName: unifi
+repo: github.com/thebsdbox/kubernetes-controllers/unifi
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: thebsdbox.co.uk
+  group: unifi
+  kind: CloudController
+  path: github.com/thebsdbox/kubernetes-controllers/unifi/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: thebsdbox.co.uk
+  group: unifi
+  kind: User
+  path: github.com/thebsdbox/kubernetes-controllers/unifi/api/v1
+  version: v1
+version: "3"

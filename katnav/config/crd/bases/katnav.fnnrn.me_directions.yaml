@@ -1,0 +1,91 @@
+
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.4.1
+  creationTimestamp: null
+  name: directions.katnav.fnnrn.me
+spec:
+  group: katnav.fnnrn.me
+  names:
+    kind: Directions
+    listKind: DirectionsList
+    plural: directions
+    singular: directions
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        description: Directions is the Schema for the directions API
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: DirectionsSpec defines the desired state of Directions
+            properties:
+              destination:
+                description: Destination is the end of our journey
+                type: string
+              source:
+                description: Source is where the beginning of our journey is
+                type: string
+            required:
+            - destination
+            - source
+            type: object
+          status:
+            description: DirectionsStatus defines the observed state of Directions
+            properties:
+              directions:
+                description: Directions is a list of directions to our destination
+                type: string
+              distance:
+                description: Distance is the total distance of the journey
+                type: string
+              duration:
+                description: Duration is the amount of time the journey will take
+                type: string
+              endLocation:
+                description: EndLocation is the start from the directions API
+                type: string
+              error:
+                description: Error captures an error message if the route isn't possible
+                type: string
+              routeSummary:
+                description: Routesummary gives a simple overview of the route
+                type: string
+              startLocation:
+                description: StartLocation is the start from the directions API
+                type: string
+            required:
+            - directions
+            - distance
+            - duration
+            - endLocation
+            - routeSummary
+            - startLocation
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []

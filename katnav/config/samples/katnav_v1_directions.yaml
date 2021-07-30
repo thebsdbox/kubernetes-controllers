@@ -1,0 +1,7 @@
+apiVersion: katnav.fnnrn.me/v1
+kind: Directions
+metadata:
+  name: directions-sample
+spec:
+  # Add fields here
+  foo: bar

@@ -1,0 +1,7 @@
+apiVersion: unifi.thebsdbox.co.uk/v1
+kind: CloudController
+metadata:
+  name: cloudcontroller-sample
+spec:
+  # Add fields here
+  foo: bar

@@ -1,0 +1,16 @@
+domain: fnnrn.me
+layout:
+- go.kubebuilder.io/v3
+projectName: katnav
+repo: github.com/thebsdbox/kubernetes-controllers/katnav
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: fnnrn.me
+  group: katnav
+  kind: Directions
+  path: github.com/thebsdbox/kubernetes-controllers/katnav/api/v1
+  version: v1
+version: "3"
