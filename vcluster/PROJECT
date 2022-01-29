@@ -1,0 +1,16 @@
+domain: fnnrn.me
+layout:
+- go.kubebuilder.io/v3
+projectName: vcluster
+repo: github.com/thebsdbox/kubernetes-controllers/vcluster
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: fnnrn.me
+  group: vcluster
+  kind: Cluster
+  path: github.com/thebsdbox/kubernetes-controllers/vcluster/api/v1
+  version: v1
+version: "3"
